@@ -81,7 +81,7 @@ def analyze():
         prompt = f"these are {len(pdf_texts)} test papers of a student. Do analysis of these test papers and give me 'Key Problems', 'How to Improve'. "
         for i, pdf_text in enumerate(pdf_texts):
             prompt += f"Test paper {i+1}: '{pdf_text}' "
-        prompt += ". give the response in html code and in the response don't give any instrucions directly start the Key Problems. don't add the full html boilerplatecode just start from the inner body tags because i want to use the response as the innerHtml of div and don't include the body tag and strictly don't use '*' in the response and i want you to give response without any excuse. put it in a code tag"
+        prompt += ". give the response in html code and in the response don't give any instrucions directly start the Key Problems. don't add the full html boilerplatecode just start from the inner body tags because i want to use the response as the innerHtml of div and don't include the body tag and strictly don't use '*' in the response and i want you to give response without any excuse. put it in a code tag.start your response from Most Frequently Asked Questions (strictly)."
     else:  # question_papers
         prompt = f"these are {len(pdf_texts)} question papers. Do analysis and give me 'most frequently asked questions', 'most important questions'. "
         for i, pdf_text in enumerate(pdf_texts):

@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #3498db;
+  background-color: #2cbbcb;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -69,7 +69,7 @@ main > p {
 }
 
 .toggle-container input[type="radio"]:checked + label {
-  background-color: #3498db;
+  background-color: #2cbbcb;
   color: white;
 }
 
@@ -84,6 +84,11 @@ main > p {
 .upload-section {
   margin-bottom: 2rem;
 }
+.logo {
+  height: 140px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
 
 .drop-container {
   display: flex;
@@ -93,7 +98,7 @@ main > p {
   height: 200px;
   padding: 20px;
   border-radius: 10px;
-  border: 2px dashed #3498db;
+  border: 2px dashed #2cbbcb;
   background-color: #f0f8ff;
   color: #444;
   cursor: pointer;
@@ -102,7 +107,7 @@ main > p {
 
 .drop-container:hover {
   background-color: rgba(52, 152, 219, 0.1);
-  border-color: rgba(52, 152, 219, 0.5);
+  border-color: #16808b;
 }
 
 .drop-title {
@@ -125,7 +130,7 @@ input[type=file] {
 input[type=file]::file-selector-button {
   margin-right: 20px;
   border: none;
-  background: #3498db;
+  background: #2cbbcb;
   padding: 10px 20px;
   border-radius: 5px;
   color: #fff;
@@ -141,7 +146,7 @@ input[type=file]::file-selector-button:hover {
   display: block;
   width: 100%;
   padding: 12px;
-  background-color: #3498db;
+  background-color: #2cbbcb;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -182,7 +187,7 @@ input[type=file]::file-selector-button:hover {
 
 .loader {
   border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
+  border-top: 5px solid #2cbbcb;
   border-radius: 50%;
   width: 50px;
   height: 50px;
