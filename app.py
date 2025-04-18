@@ -9,6 +9,8 @@ import tempfile
 from pdf2image import convert_from_path
 import pytesseract
 from PIL import Image
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -40,7 +42,7 @@ def analyze():
         extracted_text = extract_text_with_multiple_methods(pdf_path)
         pdf_texts.append(extracted_text)
     
-    genai.configure(api_key="AIzaSyB0HeJ3JJBAU_LiwIsQcZVnIJUtiefY6JQ")
+    genai.configure(api_key=os.getenv('GENAI_API_KEY'))
     
     generation_config = {
         "temperature": 1,
