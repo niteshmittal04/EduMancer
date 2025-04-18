@@ -1,0 +1,4 @@
+Flask
+fitz
+PyPDF2
+google-generativeai

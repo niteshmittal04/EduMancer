@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <header>
+        <h1>PPA</h1>
+    </header>
+    <main>
+        <h1>Upload, Relax, and Let PPA Do the Analysis for You!</h1>
+        <p>Powered by Gemini 1.5 Pro</p>
+
+        <div class="analysis-type">
+            <h2>Select Analysis Type:</h2>
+            <div class="toggle-container">
+                <input type="radio" id="question_papers" name="analysis_type" value="question_papers" checked>
+                <label for="question_papers">Question Papers Analysis</label>
+                
+                <input type="radio" id="test_papers" name="analysis_type" value="test_papers">
+                <label for="test_papers">Test Papers Analysis</label>
+            </div>
+        </div>
+
+        <div class="analysis-description" id="question_papers_desc">
+            <p>Upload question papers to find most frequently asked questions and important topics.</p>
+        </div>
+        <div class="analysis-description" id="test_papers_desc" style="display: none;">
+            <p>Upload student test papers to identify key problems and get improvement suggestions.</p>
+        </div>
+
+        <section class="upload-section">
+            <label for="pdf_files" class="drop-container" id="dropcontainer">
+                <span class="drop-title">Drop PDF files here</span>
+                or
+                <input type="file" id="pdf_files" multiple accept=".pdf">
+            </label>
+        </section>
+        <button id="upload-btn">Upload and Analyze</button>
+        
+        <section class="result-section">
+            <div class="loader" id="loader" style="display: none;"></div>
+            <div id="result-text"></div>
+        </section>
+    </main>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
